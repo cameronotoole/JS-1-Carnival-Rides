@@ -38,7 +38,7 @@ yellowWireConnected = false;
 if (greenWireConnected && redWireConnected && waterIsOn && !yellowWireConnected) {
     ride3PowerOn = true
 }
-console.log(redWireConnected)
+
 //Ride 4 has power when:
 //ride wire is connected
 ride4PowerOn = false
@@ -56,5 +56,23 @@ if (redWireConnected) {
 //if a 6 is rolled it should return "tiger"
 //if a 7 is rolled it should return "seven"
 function ride4SlotMachine(rolledNumber) {
-    return "nothing"
-}
+
+    switch (rolledNumber) {
+        case 1:
+            return "star";
+        case 2:
+            return "car";
+        case 3:
+            return "pot of gold";
+        case 4:
+            return "clover";
+        case 5:
+            return "bowling ball";
+        case 6:
+            return "tiger";
+        case 7:
+            return "seven";
+        default:
+            return "nothing";
+    }
+} console.log(ride4SlotMachine(2));
